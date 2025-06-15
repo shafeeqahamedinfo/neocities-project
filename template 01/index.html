@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0"> 
+<title>Dots Loading Animation</title> 
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    cursor: none; /* Hide the default cursor */
+  }
+  #custom-cursor {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+  }
+</style>
+</head> 
+	
+<body> 
+    <script>
+    document.addEventListener('mousemove', function(event) {
+        var cursor = document.getElementById('custom-cursor');
+        cursor.style.left = event.clientX + 'px';
+        cursor.style.top = event.clientY + 'px';
+      });
+      
+      </script>
+    <div id="custom-cursor"></div>
+    <script src="js.js"></script>
+</body> 
+</html> 
