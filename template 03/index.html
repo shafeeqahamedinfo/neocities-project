@@ -1,0 +1,46 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+  }
+  #cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+  }
+  #cursor-shadow {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 128, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+    </style>
+    <script>
+       document.addEventListener('mousemove', function(event) {
+    var dot = document.getElementById('cursor-dot');
+    var shadow = document.getElementById('cursor-shadow');
+    dot.style.left = event.clientX + 'px';
+    dot.style.top = event.clientY + 'px';
+    shadow.style.left = event.clientX + 'px';
+    shadow.style.top = event.clientY + 'px';
+  }); 
+    </script>
+</head>
+<body>
+    <div id="cursor-dot"></div>
+<div id="cursor-shadow"></div>
+</body>
+</html>

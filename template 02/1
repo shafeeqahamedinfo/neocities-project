@@ -1,0 +1,5 @@
+ <audio id="SFX1" src="https://files.catbox.moe/hngo8j.mp3" type="audio/mp3" preload="auto"></audio>    
+    <script>
+      var audio = document.getElementById("SFX1");
+      audio.volume = 0.05;
+    </script>
